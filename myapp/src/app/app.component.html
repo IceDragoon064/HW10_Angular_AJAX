@@ -1,4 +1,2 @@
 <h1>Welcome to {{title}}!</h1>
-<input type='text' (keydown)="myKeyDown($event)">
-<br>
-<input type='text' (keyup)="myKeyUp($event)">
+<input type='text' (focus)="myFocusEvent('gainedFocus')" (blur)="myFocusEvent('lostFocus')">
