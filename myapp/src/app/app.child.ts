@@ -16,6 +16,11 @@ import { Component, Input } from '@angular/core';
       <td><input type='text' [(ngModel)]="city"></td>
     </tr>
     <tr>
+      <td>Region: </td>
+      <td>&nbsp;&nbsp;</td>
+      <td><input type='text' [(ngModel)]="region"></td>
+    </tr>
+    <tr>
       <td></td>
       <td></td>
       <td><input type="submit" (click)="submitInput()"/></td>
@@ -25,7 +30,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ChildComponent {
-  streetAddress!: string;
+  streetAddress: string;
+  region: string;
 
   @Input()
   city: string;
@@ -34,6 +40,6 @@ export class ChildComponent {
   callParent: Function;
 
   submitInput() {
-    this.callParent(this.streetAddress, this.city);
+    this.callParent(this.streetAddress, this.city, this.region);
   }
 }
