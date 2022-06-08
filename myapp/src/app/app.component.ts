@@ -8,8 +8,17 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'app';
+  cutContent = '';
+  myContent: string;
+  myPastedContent:string;
 
-  myFocusEvent(description) {
-    console.log(description)
+  cutEvent(content) {
+    this.cutContent = content;
+    console.log(content)
+  }
+
+  pasteContent() {
+    console.log(this.cutContent);
+    this.cutContent = '';
   }
 }

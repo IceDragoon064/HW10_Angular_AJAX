@@ -1,2 +1,6 @@
 <h1>Welcome to {{title}}!</h1>
-<input type='text' (focus)="myFocusEvent('gainedFocus')" (blur)="myFocusEvent('lostFocus')">
+Cut from here:
+<input [(ngModel)]="myContent" type='text' (cut)="cutEvent(myContent)"><br />
+Paste in here:
+<input type='text' [(ngModel)]="myPastedContent"
+(paste)="pasteContent()">
