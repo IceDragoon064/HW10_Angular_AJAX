@@ -17,16 +17,16 @@ export class HighlightDirective {
   // Set color on mouse entry. 'red' is the default.
   @HostListener('mouseenter')
   onMouseEnter() {
-    this.highlight( this.highlightColor || 'red');
+    this.Color( this.highlightColor || 'red');
   }
 
   // Set color to null on mouse exit.
   @HostListener('mouseleave')
   onMouseLeave() {
-    this.highlight(null);
+    this.Color(null);
   }
 
-  private highlight(color: string) {
+  private Color(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
 }
