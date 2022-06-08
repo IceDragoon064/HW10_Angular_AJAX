@@ -8,17 +8,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'app';
-  cutContent = '';
-  myContent: string;
-  myPastedContent:string;
 
-  cutEvent(content) {
-    this.cutContent = content;
-    console.log(content)
-  }
-
-  pasteContent() {
-    console.log(this.cutContent);
-    this.cutContent = '';
+  myMouseHandler(event, description) {
+    console.log(description + " X: "
+    + event.screenX.toString()
+    + " Y:" + event.screenY.toString())
   }
 }

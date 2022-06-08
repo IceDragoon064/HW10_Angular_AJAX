@@ -1,6 +1,9 @@
-<h1>Welcome to {{title}}!</h1>
-Cut from here:
-<input [(ngModel)]="myContent" type='text' (cut)="cutEvent(myContent)"><br />
-Paste in here:
-<input type='text' [(ngModel)]="myPastedContent"
-(paste)="pasteContent()">
+<div (mousedown)="myMouseHandler($event, 'mouse down')"
+(mouseup)="myMouseHandler($event, 'mouse up')"
+(mousemove)="myMouseHandler($event, 'mouse move')">
+  This area has<br />
+  mouse-down<br />
+  and<br />
+  mouse-up<br />
+  enabled.
+</div>
