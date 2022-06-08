@@ -7,10 +7,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './app.child';
 
+import { HighlightDirective } from './app.highlight.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
