@@ -10,7 +10,12 @@ export class AppComponent {
   title = 'app';
 
   myKeyDown(event) {
-    console.log(event)
-    console.log(event.key)
+    console.log(event);
+    console.log(event.key);
+  }
+
+  myKeyUp(event){
+    console.log(event);
+    console.log(event.key);
   }
 }
